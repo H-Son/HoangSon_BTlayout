@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--font google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font icon8 -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <!-- font flaticon -->
+    <link rel="stylesheet" href="../Flaticon/flaticon.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.3/swiper-bundle.min.js"
+      integrity="sha512-IqCDduS8vMNOceNh03uPZX/h2Ym4RH347+/XiMengD33cBY4TA+bu0tkzgveVCf5t9jxy9oBLs7FrqKtoTJabA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper -->
+    <link rel="stylesheet" href="../swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__content container">
+        <nav class="navbar">
+          <a class="navbar-brand">Diner</a>
+          <form class="form-inline">
+            <div class="search">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search Here"
+                aria-label="Search"
+              />
+            </div>
+            <!-- The overlay -->
+            <div id="myNav" class="overlay">
+              <!-- Button to close the overlay navigation -->
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                ><i class="fa fa-times"></i
+              ></a>
+
+              <!-- Overlay content -->
+              <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <span onclick="openNav()" class="icon"
+              ><i class="fa fa-bars"></i
+            ></span>
+          </form>
+        </nav>
+      </div>
+    </header>
+    <div class="carousel">
+      <div class="carousel__item container">
+        <div class="carousel__content">
+          <h1>The Only Thing We Love More Than Food Is You!</h1>
+          <p>
+            We develops that underpin the next phase in your organisation’s
+            growth. Lorem i adipisicing elit. Illum quo, illo eum cum autem
+            magnam!
+          </p>
+
+          <a class="btn btn-read" href="">
+            Read More <span class="fa fa-chevron-right ml-2"></span
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="container">
+        <div class="about__left">
+          <h6>About Us</h6>
+          <h3>We found our creative space that is open for you</h3>
+        </div>
+        <div class="about__right">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+            eius omnis doloremque. Quis corporis excepturi sed possimus, dolor
+            voluptatem atque corrupti et unde harum quae aliquam quisquam? Porro
+            maxime dicta neque. Provident facere consequatur eveniet deleniti
+            rerum animi, natus non!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perferendis quibusdam et eius quaerat sequi ipsum optio harum
+            blanditiis quidem unde.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="best">
+      <div class="best__img">
+        <img src="../images/banner3.jpg" alt="" />
+      </div>
+      <div class="best__content">
+        <div class="best__container">
+          <h6>More than 3000 Restaurants</h6>
+          <h3>Book a table easly at the best price</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            placeat rerum impedit, a porro nobis iure, illum aliquid cupiditate
+            veritatis ducimus ratione quo totam officia dolor laborum autem eius
+            aspernatur?
+          </p>
+          <div class="best__card">
+            <div class="best__1">
+              <button type="button" class="btn btn-card">
+                <i class="fa fa-thumbs-up"></i>
+              </button>
+              <a href="">Best Deals</a>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
+              </p>
+            </div>
+            <div class="best__1">
+              <button type="button" class="btn btn-card">
+                <i class="fa fa-cutlery"></i>
+              </button>
+              <a href="">Best Food</a>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <div class="category__container container">
+        <div class="category__item">
+          <img src="../images/g1.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+        <div class="category__item">
+          <img src="../images/g2.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+        <div class="category__item">
+          <img src="../images/g3.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+        <div class="category__item">
+          <img src="../images/g4.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+        <div class="category__item">
+          <img src="../images/g5.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+        <div class="category__item">
+          <img src="../images/g6.jpg" alt="" />
+          <div class="category__overlay"></div>
+          <div class="item__title">
+            <h3>Lorem, ipsum.</h3>
+            <h3>$350</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="menu__container container">
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__img">
+            <button type="button" class="btn btn-menu">
+              <i class="fa fa-cutlery"></i>
+            </button>
+            <div class="menu__1">
+              <h6>01</h6>
+              <h3>best food</h3>
+            </div>
+          </div>
+          <div class="menu__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloribus, quia. Quam unde, ipsam autem commodi blanditiis ullam
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro">
+      <div class="intro__container container">
+        <h1>Deliciousness jumping into the mouth.</h1>
+        <a class="btn btn-read" href="">
+          Read More <span class="fa fa-chevron-right ml-2"></span
+        ></a>
+        <a class="btn btn-read" href="">
+          Read More <span class="fa fa-chevron-right ml-2"></span
+        ></a>
+        <div class="number container">
+          <div class="number__item">
+            <div class="number__icon">
+              <i class="fa fa-thumbs-up"></i>
+            </div>
+            <span class="counter">18</span>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="number__item">
+            <div class="number__icon">
+              <i class="fa fa-thumbs-up"></i>
+            </div>
+            <span class="counter">100</span>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="number__item">
+            <div class="number__icon">
+              <i class="fa fa-thumbs-up"></i>
+            </div>
+            <span class="counter">200</span>
+            <p>Satisfied Clients</p>
+          </div>
+          <div class="number__item">
+            <div class="number__icon">
+              <i class="fa fa-thumbs-up"></i>
+            </div>
+            <span class="counter">250</span>
+            <p>Satisfied Clients</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="video">
+      <div class="video__container container">
+        <div class="video__dark">
+          <button type="button" class="btn btn__video" onclick="openVideo()">
+            <i class="fa fa-thumbs-up"></i>
+          </button>
+        </div>
+        <div class="overlay__video" id="myVideo">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeVideo()"
+            ><i class="fa fa-times"></i
+          ></a>
+
+          <div id="#" class="video__content">
+            <iframe
+              src="https://player.vimeo.com/video/305185528"
+              frameborder="0"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery js -->
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- waypoint & countup -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
+    <script>
+      $(".counter").countUp({});
+    </script>
+    <!-- fancybox -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- swiper -->
+    <script src="../swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../css/index.js"></script>
+  </body>
+</html>
