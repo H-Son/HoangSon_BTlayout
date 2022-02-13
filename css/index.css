@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.clear {
+  clear: both;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.closebtn i {
+  height: 35px;
+  width: 35px;
+  background-color: orange;
+  text-align: center;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-size: 2.2rem;
+}
+.icon i {
+  font-weight: bold;
+  color: #f1f1f1;
+}
+.navbar .navbar-brand {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f1f1f1 !important;
+}
+.fa-bars:before,
+.fa-navicon:before {
+  font-size: 1.5rem;
+  margin-left: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* //////////////// */
+header {
+  height: 100px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 99;
+}
+.carousel {
+  position: relative;
+  background-size: cover;
+  background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)),
+    url(../images/banner1.jpg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* background-position: initial;
+  background-attachment: fixed; */
+  min-height: 700px;
+  background-attachment: fixed;
+}
+.carousel__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  width: 40%;
+  padding-top: 200px;
+}
+.carousel__content h1,
+p,
+a {
+  color: #f1f1f1;
+  padding-top: 20px;
+}
+.carousel__content h1 {
+  font-size: 50px;
+}
+.btn-read {
+  width: 200px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 12px 45px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  transition: 0.3s;
+  border-radius: 15px;
+  /* border: 2px solid transparent; */
+}
+.btn-read:hover {
+  background-color: #f1f1f1;
+  color: #ff6600;
+  border: 2px solid transparent;
+}
+/* ///////////////// */
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__left {
+  width: 40%;
+  padding: 30px;
+}
+.about__right {
+  width: 60%;
+  padding: 30px;
+}
+.about__right p {
+  color: black;
+}
+/* /////////////// */
+.best {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6600;
+  height: 450px;
+}
+.best__img {
+  width: 50%;
+  padding: 10px 0;
+}
+.best__img img {
+  width: 100%;
+  height: 430px;
+}
+.best__content {
+  width: 50%;
+}
+.best__container {
+  padding: 50px;
+}
+.best__card {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+.best__1 a {
+  display: block;
+}
+.best__1:hover i {
+  color: #ff6600;
+}
+/* ////////////////////// */
+.category__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 430px 430px;
+  grid-gap: 30px;
+}
+.category__item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.category__item {
+  position: relative;
+}
+.item__title {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.category__overlay {
+  background-color: rgba(211, 207, 207, 0.568);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+.category__overlay:hover {
+  opacity: 0.5;
+}
+/* ////////////////// */
+.btn-test {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+}
+.test h4 {
+  color: black;
+}
+.test h4:hover {
+  color: red;
+}
+.test h4:hover .test {
+  background-color: #ff6600;
+}
+.test i {
+  color: #ff6600;
+}
+/* //////////// */
+.menu {
+  background-color: #000;
+}
+.menu__container {
+  background-color: #f1f1f1;
+  padding: 50px 0;
+}
+.menu__img {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.menu__content p {
+  color: #000;
+}
+.btn-menu {
+  height: 80px;
+  width: 80px;
+  background-color: rgb(98, 179, 152);
+  margin-right: 20px;
+}
+.menu__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  grid-gap: 40px;
+}
+.menu__item {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px;
+}
+/* //////////////// */
+.intro {
+  background-image: url(../images/banner2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 550px;
+  position: relative;
+}
+.intro__container {
+  text-align: center;
+  padding-top: 200px;
+}
+.number {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 150px;
+  grid-gap: 40px;
+  position: absolute;
+  bottom: -70px;
+}
+.number__item {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px;
+  background-color: #f1f1f1;
+  color: #000;
+  transform: translateY(20px);
+  transition: 0.3s;
+}
+.number__item:hover {
+  transform: translateY(0);
+}
+.number__item p {
+  color: #000;
+}
+/* //////// */
+.video {
+  margin: 150px 0;
+}
+.video__container {
+  background-image: url(../images/banner3.jpg);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.video__content iframe {
+  width: 950px;
+  height: 500px;
+}
+.video__dark {
+  background-color: rgba(20, 19, 19, 0.568);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: 0.4s;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn__video {
+  margin-top: 220px;
+  height: 60px;
+  width: 60px;
+  font-size: 25px;
+  border-radius: 50%;
+  transition: 0.3s;
+  color: #ff6600;
+  background-color: #f1f1f1;
+}
+.btn__video:hover {
+  margin-top: 210px;
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+  color: #f1f1f1;
+  background-color: #ff6600;
+}
+/* /////////// */
+.overlay__video {
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s;
+}
+.video__content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px;
+}
+.overlay__video .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 45px;
+  font-size: 60px;
+}
